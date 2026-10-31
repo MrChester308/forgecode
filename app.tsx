@@ -1,4 +1,4 @@
-import { Fragment, jsx } from "react/jsx-dev-runtime";
+import { Fragment, jsx } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion";
@@ -968,7 +968,7 @@ function Release() {
           columnNumber: 470
         }, this),
         /* @__PURE__ */ jsx("span", { className: "release-action disabled", "aria-disabled": "true", children: [
-          /* @__PURE__ */ jsx("span", { children: /* @__PURE__ */ jsx(Gitbranch, { size: 16 }, void 0, false, {
+          /* @__PURE__ */ jsx("span", { children: /* @__PURE__ */ jsx(GitBranch, { size: 16 }, void 0, false, {
             fileName: "<stdin>",
             lineNumber: 36,
             columnNumber: 700
