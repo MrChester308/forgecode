@@ -6,7 +6,7 @@ import { ArrowDownRight, ArrowRight, ArrowUpRight, Menu, X, Plus, Minus, Termina
 const navItems = [{ label: "Home", href: "#home" }, { label: "Features", href: "#features" }, { label: "Roadmap", href: "#roadmap" }, { label: "FAQ", href: "#faq" }];
 const features = [
   { num: "01", icon: Terminal, title: "Terminal first", copy: "A coding assistant designed around terminal-based development. Your tools, your environment, your flow." },
-  { num: "02", icon: Wrench, title: "Developer freedom", copy: "A tool that puts you in control of your workflow\u2014without subscriptions, paywalls, or lock-in." },
+  { num: "02", icon: Wrench, title: "Developer freedom", copy: "A tool that puts you in control of your workflow—without subscriptions, paywalls, or lock-in." },
   { num: "03", icon: GitBranch, title: "Open source", copy: "Transparent development, inspectable source, and a project shaped in the open with its community." },
   { num: "04", icon: Workflow, title: "MCP support", copy: "Connecting to external tools and MCP servers is part of the direction ForgeCode is being built toward." },
   { num: "05", icon: Layers3, title: "Flexible workflow", copy: "An adaptable development experience, made to fit different projects and the way you like to work." }
@@ -27,7 +27,11 @@ const faqs = [
 ];
 function Brand({ small = false }) {
   return /* @__PURE__ */ jsx("a", { className: "brand " + (small ? "brand-small" : ""), href: "#home", "aria-label": "ForgeCode home", children: [
-    /* @__PURE__ */ jsx("span", { className: "brand-mark-image", "aria-hidden": "true", children: /* @__PURE__ */ jsx("img", { src: "favicon.png", alt: "" }, void 0, false, {
+    /* @__PURE__ */ jsx("span", { className: "brand-mark-image", "aria-hidden": "true", children: /* @__PURE__ */ jsx("img", {
+      src: "/logo.png",
+      alt: "ForgeCode",
+      className: "forgecode-logo"
+    }, void 0, false, {
       fileName: "<stdin>",
       lineNumber: 28,
       columnNumber: 203
@@ -285,7 +289,7 @@ function ForgeVisual() {
     }, this),
     /* @__PURE__ */ jsx("div", { className: "scene-label label-bottom", children: [
       "CORE ASSEMBLY ",
-      /* @__PURE__ */ jsx("span", { children: "\u2014" }, void 0, false, {
+      /* @__PURE__ */ jsx("span", { children: "—" }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 30,
         columnNumber: 1889
@@ -297,13 +301,13 @@ function ForgeVisual() {
       columnNumber: 1833
     }, this),
     /* @__PURE__ */ jsx("div", { className: "scene-coordinate", children: [
-      "45\xB0 08\u2032 04\u2033 N",
+      "45° 08′ 04″ N",
       /* @__PURE__ */ jsx("br", {}, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 30,
         columnNumber: 1962
       }, this),
-      "13\xB0 37\u2032 21\u2033 E"
+      "13° 37′ 21″ E"
     ] }, void 0, true, {
       fileName: "<stdin>",
       lineNumber: 30,
@@ -317,7 +321,7 @@ function ForgeVisual() {
 }
 function Reveal({ children, className = "", delay = 0 }) {
   const reduce = useReducedMotion();
-  return /* @__PURE__ */ jsx(motion.div, { className, initial: reduce ? false : { opacity: 0, y: 22 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.18 }, transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }, children }, void 0, false, {
+  return /* @__PURE__ */ jsx(motion.div, { className, initial: reduce ? false : { opacity: 0, y: 22 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.18 }, transition: { duration: 0.56, delay }, children }, void 0, false, {
     fileName: "<stdin>",
     lineNumber: 31,
     columnNumber: 154
@@ -350,7 +354,7 @@ function Hero() {
           lineNumber: 32,
           columnNumber: 240
         }, this),
-        /* @__PURE__ */ jsx("sup", { children: "\xAE" }, void 0, false, {
+        /* @__PURE__ */ jsx("sup", { children: "®" }, void 0, false, {
           fileName: "<stdin>",
           lineNumber: 32,
           columnNumber: 257
@@ -502,7 +506,7 @@ function Features() {
         lineNumber: 33,
         columnNumber: 118
       }, this),
-      /* @__PURE__ */ jsx(Reveal, { delay: 0.12, children: /* @__PURE__ */ jsx("p", { className: "section-intro", children: "Not another layer between you and your work. A coding assistant grounded in the tools and freedom developers already value." }, void 0, false, {
+      /* @__PURE__ */ jsx(Reveal, { delay: 0.12, children: /* @__PURE__ */ jsx("p", { className: "section-intro", children: "Not another layer between you and your work. A coding assistant grounded in intention, speed, and clarity." }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 33,
         columnNumber: 279
@@ -574,7 +578,7 @@ function Features() {
         lineNumber: 33,
         columnNumber: 867
       }, this),
-      /* @__PURE__ */ jsx("span", { children: "01 \u2014 05" }, void 0, false, {
+      /* @__PURE__ */ jsx("span", { children: "01 — 05" }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 33,
         columnNumber: 910
@@ -718,7 +722,7 @@ function Philosophy() {
           lineNumber: 34,
           columnNumber: 714
         }, this),
-        /* @__PURE__ */ jsx("i", { children: "\xB7" }, void 0, false, {
+        /* @__PURE__ */ jsx("i", { children: "·" }, void 0, false, {
           fileName: "<stdin>",
           lineNumber: 34,
           columnNumber: 728
@@ -797,7 +801,7 @@ function Roadmap() {
         lineNumber: 35,
         columnNumber: 165
       }, this),
-      /* @__PURE__ */ jsx(Reveal, { delay: 0.1, children: /* @__PURE__ */ jsx("p", { className: "section-intro", children: "A work in progress, with the next steps in view. Planned means planned\u2014not shipped." }, void 0, false, {
+      /* @__PURE__ */ jsx(Reveal, { delay: 0.1, children: /* @__PURE__ */ jsx("p", { className: "section-intro", children: "A work in progress, with the next steps in view. Planned means planned—it's a direction, not a promise." }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 35,
         columnNumber: 322
@@ -811,7 +815,7 @@ function Roadmap() {
       lineNumber: 35,
       columnNumber: 134
     }, this),
-    /* @__PURE__ */ jsx("div", { className: "roadmap-list", children: roadmap.map((item, i) => /* @__PURE__ */ jsx("button", { className: "roadmap-row " + (selected === i ? "selected" : ""), onClick: () => setSelected(i), "aria-expanded": selected === i, children: [
+    /* @__PURE__ */ jsx("div", { className: "roadmap-list", children: roadmap.map((item, i) => /* @__PURE__ */ jsx("button", { className: "roadmap-row " + (selected === i ? "selected" : ""), onClick: () => setSelected(selected === i ? -1 : i), children: [
       /* @__PURE__ */ jsx("span", { className: "roadmap-index mono", children: item.id }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 35,
@@ -1272,7 +1276,7 @@ function Footer() {
     }, this),
     /* @__PURE__ */ jsx("div", { className: "footer-bottom", children: [
       /* @__PURE__ */ jsx("span", { children: [
-        "\xA9 ",
+        "© ",
         (/* @__PURE__ */ new Date()).getFullYear(),
         " FORGECODE"
       ] }, void 0, true, {
@@ -1282,7 +1286,7 @@ function Footer() {
       }, this),
       /* @__PURE__ */ jsx("span", { children: [
         "MADE FOR WHAT'S NEXT ",
-        /* @__PURE__ */ jsx("span", { className: "orange", children: "\u2197" }, void 0, false, {
+        /* @__PURE__ */ jsx("span", { className: "orange", children: "↗" }, void 0, false, {
           fileName: "<stdin>",
           lineNumber: 38,
           columnNumber: 754
@@ -1292,7 +1296,7 @@ function Footer() {
         lineNumber: 38,
         columnNumber: 727
       }, this),
-      /* @__PURE__ */ jsx("a", { href: "#home", children: "BACK TO TOP \u2191" }, void 0, false, {
+      /* @__PURE__ */ jsx("a", { href: "#home", children: "BACK TO TOP ↑" }, void 0, false, {
         fileName: "<stdin>",
         lineNumber: 38,
         columnNumber: 794
