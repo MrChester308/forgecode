@@ -1,3 +1,4 @@
+import "./styles.css";
 import { Fragment, jsx } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
